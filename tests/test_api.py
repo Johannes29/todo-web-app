@@ -21,7 +21,11 @@ class TestAPI(unittest.TestCase):
         
         self.assertEqual(201, response.status_code)
         self.assertIn(task_name, response.text)
-        
+    
+    def test_create_task_with_invalid_request(self):
+        response = requests.post(BASE_URL + "/api/new_task", data="")
+        self.assertEqual(400, response.status_code)
+
     @classmethod
     def tearDownClass(cls):
         cls.server_process.terminate()
