@@ -23,3 +23,8 @@ pip install -r requirements.txt
 ```bat
 flask --app api/main run
 ```
+
+## Running the tests
+```bat
+python -m unittest discover -s tests
+```
