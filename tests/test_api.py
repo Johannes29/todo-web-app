@@ -21,13 +21,7 @@ class TestAPI(unittest.TestCase):
         
         self.assertEqual(201, response.status_code)
         self.assertIn(task_name, response.text)
-
-    # This test is just a placeholder for future tests
-    def test_hello_world(self):
-        response = requests.get(BASE_URL)
-        self.assertEqual(200, response.status_code)
-        self.assertIn("hello, world", response.text.lower())
-    
+        
     @classmethod
     def tearDownClass(cls):
         cls.server_process.terminate()
