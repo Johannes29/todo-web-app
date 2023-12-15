@@ -1,5 +1,5 @@
 # To Do Web App
-A simple webb app for keeping track of tasks
+A simple web app for keeping track of tasks
 
 ## Development setup
 Make a virtual environment for Python
