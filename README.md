@@ -7,7 +7,7 @@ Make a virtual environment for Python
 python -m venv .venv
 ```
 
-Then enter it
+Then enter it (run this line in cmd)
 ```bat
 .venv\Scripts\activate.bat
 ```
