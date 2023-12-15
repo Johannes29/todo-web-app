@@ -11,7 +11,7 @@ class Tasks:
 
     def get_task(self, task_id):
         for task in self.tasks:
-            if task[id] == task_id:
+            if int(task["id"]) == task_id:
                 return task
 
     def _new_task_id(self):
