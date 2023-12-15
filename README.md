@@ -14,7 +14,7 @@ Then enter it
 
 > If you wish to exit the virtual environment, run `deactivate` 
 
-Install the required python packages
+Finally install the required python packages
 ```bat
 pip install -r requirements.txt
 ```
