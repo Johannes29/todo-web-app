@@ -17,14 +17,17 @@ class TestAPI(unittest.TestCase):
             "name": task_name
         })
 
-        response = requests.post(BASE_URL + "/api/new_task", data=request_body)
+        response = requests.post(BASE_URL + "/api/new_task", data=request_body, headers=self.get_json_utf8_headers())
         
         self.assertEqual(201, response.status_code)
         self.assertIn(task_name, response.text)
     
     def test_create_task_with_invalid_request(self):
-        response = requests.post(BASE_URL + "/api/new_task", data="")
+        response = requests.post(BASE_URL + "/api/new_task", data="", headers=self.get_json_utf8_headers())
         self.assertEqual(400, response.status_code)
+
+    def get_json_utf8_headers(self):
+        return {"Content-Type": "application/json", "charset": "utf-8"}
 
     @classmethod
     def tearDownClass(cls):
