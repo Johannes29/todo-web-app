@@ -20,11 +20,13 @@ pip install -r requirements.txt
 ```
 
 ## Running the server
+Run the following with the virual environment activated
 ```bat
 flask --app api/main run
 ```
 
 ## Running the tests
+Run the following with the virual environment activated
 ```bat
 python -m unittest discover -s tests
 ```
